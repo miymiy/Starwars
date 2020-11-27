@@ -29,7 +29,7 @@ function* watchFetch() {
   }
 }
 
-function* watchInit() {
+export function* watchInit() {
   while (true) {
     yield take(PeopleActionTypes.Init);
     yield spawn(loadPeople, uris.initPeople);

@@ -21,17 +21,16 @@ const People = ({ people, init, fetchNext, fetchPrev, loading }: Props) => {
     }
   }, [init, people]);
 
+  // this prevents PeopleList from being re-rendered on row-click
+  const onClick = React.useCallback((person: Person) => {
+    setDialogOpen(true);
+    setSelected(person);
+  }, []);
+
   return (
     <>
       <PagingButtons loading={loading} fetchNext={fetchNext} fetchPrev={fetchPrev} />
-      <PeopleList
-        onRowClick={(person) => {
-          setDialogOpen(true);
-          setSelected(person);
-        }}
-        people={people}
-        loading={loading}
-      />
+      <PeopleList onRowClick={onClick} people={people} loading={loading} />
 
       <DetailsDialog
         isOpen={dialogOpen && !!selected}

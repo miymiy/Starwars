@@ -39,7 +39,7 @@ const StyledTableRow = withStyles((theme: Theme) =>
 
 interface Props {
   people?: Person[];
-  onRowClick: (id: Person) => void;
+  onRowClick: (person: Person) => void;
   loading: boolean;
 }
 
@@ -81,4 +81,4 @@ const PeopleList = ({ people, onRowClick, loading }: Props) => (
   </TableContainer>
 );
 
-export default PeopleList;
+export default React.memo(PeopleList);

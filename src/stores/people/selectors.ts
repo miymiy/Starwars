@@ -3,10 +3,7 @@ import { createSelector } from 'reselect';
 import { RootState } from '../reducers';
 import { State } from './reducer';
 
-const getPeopleState = createSelector(
-  (state: RootState) => state.people,
-  (s) => s
-);
+const getPeopleState = (state: RootState) => state.people;
 
 const getPeople = createSelector(getPeopleState, (state: State) => state.people);
 

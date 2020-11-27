@@ -1,10 +1,5 @@
-import { createSelector } from 'reselect';
-
 import { RootState } from '../reducers';
 
-const getFilmState = createSelector(
-  (state: RootState) => state.films,
-  (s) => s
-);
+const getFilmState = (state: RootState) => state.films;
 
 export default getFilmState;
