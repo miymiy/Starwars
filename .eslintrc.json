@@ -1,0 +1,60 @@
+{
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    },
+    "globals": {
+        "window": true,
+        "__DEV__": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "jest",
+        "prettier",
+        "simple-import-sort"
+    ],
+    "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "prettier",
+        "prettier/react",
+        "prettier/@typescript-eslint",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "createDefaultProgram": true,
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "import/order": "off",
+        "sort-imports": "off",
+        "no-console": "warn",
+        "simple-import-sort/imports": "error",
+        "react/require-default-props": "off"
+    },
+    "overrides": [
+        {
+          "files": ["**/*.ts?(x)"],
+          "rules": {
+              "@typescript-eslint/explicit-function-return-type": "off",
+              "@typescript-eslint/explicit-module-boundary-types": "off"
+          }
+        }
+    ]
+}
