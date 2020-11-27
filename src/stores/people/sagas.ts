@@ -7,7 +7,7 @@ import { pageActions } from 'stores/page/actions';
 
 import { peopleActions, PeopleActionTypes } from './actions';
 
-function* loadPeople(url: string) {
+export function* loadPeople(url: string) {
   try {
     const res: PeopleResponse = yield call(request, url);
     yield put(
