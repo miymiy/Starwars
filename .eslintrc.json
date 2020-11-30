@@ -46,7 +46,8 @@
         "sort-imports": "off",
         "no-console": "warn",
         "simple-import-sort/imports": "error",
-        "react/require-default-props": "off"
+        "react/require-default-props": "off",
+        "prettier/prettier": "error"
     },
     "overrides": [
         {

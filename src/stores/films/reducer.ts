@@ -8,7 +8,7 @@ export interface State {
   loading: boolean;
 }
 
-const initialState: State = { loading: false };
+export const initialState: State = { loading: false };
 
 export default (state: State = initialState, action: FilmActions) => {
   switch (action.type) {

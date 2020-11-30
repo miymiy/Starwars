@@ -6,7 +6,7 @@ export interface State {
   error?: string;
 }
 
-const initialState: State = {};
+export const initialState: State = {};
 
 export default (state: State = initialState, action: PageActions) => {
   switch (action.type) {

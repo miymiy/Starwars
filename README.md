@@ -17,11 +17,3 @@ Launches the test runner.
 ### `yarn lint`
 
 Runs linting against source files.
-
-## Alternatives
-
-Redux-saga could be replaced by Redux-observables
-
-## Others
-
-Tests are not completed.
